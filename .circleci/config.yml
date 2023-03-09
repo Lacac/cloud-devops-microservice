@@ -29,8 +29,8 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-            curl -L "https://github.com/hadolint/hadolint/releases/latest/download/hadolint-$(uname -s)-$(uname -m)" -o /usr/local/bin/hadolint
-            chmod +x /usr/local/bin/hadolint
+            sudo curl -L "https://github.com/hadolint/hadolint/releases/latest/download/hadolint-$(uname -s)-$(uname -m)" -o /usr/local/bin/hadolint
+            sudo chmod +x /usr/local/bin/hadolint
       - save_cache:
           paths:
             - ./venv
